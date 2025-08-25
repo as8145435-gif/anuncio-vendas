@@ -34,12 +34,12 @@
               @update:model-value="changeSlide"
             >
               <v-carousel-item
-                v-for="(image, i) in anuncio.imagens"
+                v-for="(image, i) in imgs.carrossel"
                 :key="i"
                 :src="image"
                 cover
               >
-                <div class="watermark">{{ i + 1 }}/{{ anuncio.imagens.length }}</div>
+                <div class="watermark">{{ i + 1 }}/{{ imgs.carrossel.length }}</div>
               </v-carousel-item>
             </v-carousel>
           </v-col>
@@ -207,11 +207,11 @@ export default defineComponent({
     imgs: {...imgs},
     currentImage: 1,
     anuncio: {
-      titulo: "PS5 SLIM digital impecável, AvaliamosTroca, Loja física desde 2004, próximo ao metrô.",
+      titulo: "Televisão Smart Samsung 32 Polegadas",
       dataHora: "23/08 às 11:48",
-      precoAntigo: "R$ 3.105",
-      precoAtual: "R$ 3.060",
-      descricao: "iPhone 13 Pro Max 256GB na cor Grafite, com apenas 3 meses de uso. Inclui todos os acessórios originais, capa de proteção e película aplicada. Aparelho está em perfeito estado, sem nenhum arranhão ou defeito. Vendo porque recebi um modelo mais recente de presente.",
+      precoAntigo: "R$ 800,00",
+      precoAtual: "R$ 500,00",
+      descricao: "Televisão Completa Com Todos Os Acessórios Pezinhos, Controle, Caixa e Garantia Pela Loja que Comprei de 4 meses",
       localizacao: {
         cidade: "São Paulo",
         estado: "SP",
@@ -220,7 +220,7 @@ export default defineComponent({
         cep:"03401000"
       },
       anunciante: {
-        nome: "Super Games Tatuapé",
+        nome: "Lucio Silva",
         membroDesde: "abril de 2018",
         ultimoAcesso:"Último acesso há 20 horas",
         avaliacao: "4.8 (42 avaliações)",
@@ -232,12 +232,7 @@ export default defineComponent({
           referencia: "Próximo ao metrô Consolação",
           cep:"03401000"
         },
-      },
-      imagens: [
-        "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
-        "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
-        "https://cdn.vuetifyjs.com/images/carousel/bird.jpg"
-      ]
+      }
     }
   }),
   methods: {
