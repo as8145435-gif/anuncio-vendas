@@ -226,11 +226,11 @@ export default defineComponent({
         avaliacao: "4.8 (42 avaliações)",
         avatar: "https://cdn.vuetifyjs.com/images/john.jpg",
         localizacao: {
-          cidade: "São Paulo",
-          estado: "SP",
-          bairro: "Tatuapé",
+          cidade: "Mato grosso",
+          estado: "MT",
+          bairro: "Tapurah",
           referencia: "Próximo ao metrô Consolação",
-          cep:"03401000"
+          cep:"78573000"
         },
       }
     }
