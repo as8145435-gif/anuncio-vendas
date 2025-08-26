@@ -213,11 +213,11 @@ export default defineComponent({
       precoAtual: "R$ 500,00",
       descricao: "Televisão Completa Com Todos Os Acessórios Pezinhos, Controle, Caixa e Garantia Pela Loja que Comprei de 4 meses",
       localizacao: {
-        cidade: "São Paulo",
-        estado: "SP",
-        bairro: "Tatuapé",
-        referencia: "Próximo ao metrô Consolação",
-        cep:"03401000"
+        cidade: "Mato Grosso",
+        estado: "MT",
+        bairro: "Tapurah",
+        referencia: "Próximo ao metrô",
+        cep:"78573000"
       },
       anunciante: {
         nome: "Vanderson Fernandes",
@@ -229,7 +229,7 @@ export default defineComponent({
           cidade: "Mato grosso",
           estado: "MT",
           bairro: "Tapurah",
-          referencia: "Próximo ao metrô Consolação",
+          referencia: "Próximo ao metrô",
           cep:"78573000"
         },
       }

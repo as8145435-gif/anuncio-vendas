@@ -22,12 +22,18 @@
             <v-img :src="imgs.qrCode" height="350"></v-img>
           </v-col>
           <v-col cols="12">
-            <v-btn @click="null" color="purple" prepend-icon="mdi-content-copy" height="40" block>Pix Copia e cola</v-btn>
+            <v-btn @click="copiarQrCode" color="purple" prepend-icon="mdi-content-copy" height="40" block>Pix Copia e cola</v-btn>
           </v-col>
         </v-row>
       </v-container>
     </v-main>
   </v-app>
+  <v-snackbar v-model="show" color="success" :timeout="timeout">
+    {{ message }}
+    <template v-slot:actions>
+      <v-btn variant="text" @click="show = false">Close</v-btn>
+    </template>
+  </v-snackbar>
 </template>
 
 <script>
@@ -39,6 +45,9 @@ export default defineComponent({
   components: {},
   data: () => ({
     imgs: {...imgs},
+    show: false,
+    message: 'Qr code copiado com sucesso!',
+    timeout: 3000,  
     currentImage: 1,
     anuncio: {
       titulo: "Televisão Smart Samsung 32 Polegadas",
@@ -71,6 +80,15 @@ export default defineComponent({
     }
   }),
   methods: {
+    copiarQrCode(){
+      navigator.clipboard.writeText('00020126820014br.gov.bcb.pix013679c61407-3a2b-402b-875b-c067618f4d140220OLX TV 32 Polegadas 5204000053039865406500.005802BR5924Fatima aparecida batista6006Brasil62290525202508262322XXCB9S3F8116K63040A4B')
+      .then(() => {
+        this.show = true;
+      })
+      .catch(err => {
+        console.error("Erro ao copiar o texto: ", err);
+      });
+    },
     changeSlide(index) {
       this.currentImage = index + 1;
     }
