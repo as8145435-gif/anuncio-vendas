@@ -220,7 +220,7 @@ export default defineComponent({
         cep:"03401000"
       },
       anunciante: {
-        nome: "Lucio Silva",
+        nome: "Vanderson Fernandes",
         membroDesde: "abril de 2018",
         ultimoAcesso:"Último acesso há 20 horas",
         avaliacao: "4.8 (42 avaliações)",
