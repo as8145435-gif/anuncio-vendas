@@ -7,7 +7,7 @@
         Compra Segura
       </v-app-bar-title>
       <template v-slot:append>
-        <v-btn icon>
+        <v-btn @click="$router.push({name:'home'})" icon>
           <v-icon>mdi-help-circle-outline</v-icon>
         </v-btn>
       </template>
@@ -130,7 +130,9 @@
             {{anuncio.precoAtual}}
           </v-col>
           <v-col cols="12 pb-0 d-flex justify-end text-grey">
-            <v-btn block color="orange" class="text-white" rounded>Ir para pagamento</v-btn>
+            <v-btn @click="irParaPagamento"
+            :loading="loadings.loadingCompra" 
+            block color="orange" class="text-white" rounded>Ir para pagamento</v-btn>
           </v-col>
           <v-col cols="12 pb-0 d-flex justify-center text-purple">
             <v-icon>mdi-lock</v-icon> Compra segura
@@ -150,6 +152,9 @@ export default defineComponent({
   components: {},
   data: () => ({
     imgs: {...imgs},
+    loadings:{
+      loadingCompra:false
+    },
     currentImage: 1,
     anuncio: {
       titulo: "Televisão Smart Samsung 32 Polegadas",
@@ -182,6 +187,13 @@ export default defineComponent({
     }
   }),
   methods: {
+    irParaPagamento(){
+      this.loadings.loadingCompra = true;
+      setTimeout(()=>{
+        this.loadings.loadingCompra = false;
+        this.$router.push({name:"pagamento"})
+      },2000);
+    },
     changeSlide(index) {
       this.currentImage = index + 1;
     }

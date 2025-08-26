@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import FinalizarCompraView from '@/views/FinalizarCompraView.vue'
+import PagamentoCompraView from '@/views/PagamentoCompraView.vue'
 
 const routes = [
   {
@@ -9,9 +10,14 @@ const routes = [
     component: HomeView
   },
   {
+    path: '/checkout',
+    name: 'checkout',
+    component: FinalizarCompraView
+  },
+  {
     path: '/pagamento',
     name: 'pagamento',
-    component: FinalizarCompraView
+    component: PagamentoCompraView
   }
 ]
 

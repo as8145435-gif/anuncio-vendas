@@ -175,7 +175,7 @@
       <v-container>
         <v-row class="py-2">
           <v-col cols="8">
-            <v-btn @click="$router.push({name:'pagamento'})" color="orange" rounded class="text-white" size="large" block>
+            <v-btn @click="$router.push({name:'checkout'})" color="orange" rounded class="text-white" size="large" block>
               <v-icon start>mdi-currency-usd</v-icon>
               Solicitar
             </v-btn>
