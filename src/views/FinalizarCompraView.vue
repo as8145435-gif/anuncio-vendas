@@ -22,37 +22,61 @@
             Entrega <v-icon class="ml-3" color="purple">mdi-help-circle-outline</v-icon>
           </v-col>
           <v-col cols="12 pt-1">
-            <v-radio-group color="purple">
+            <v-radio-group color="purple" v-model="tipoEntrega">
               <v-radio label="Quero entrega pela OLX" value="entrega1"></v-radio>
               <v-radio label="Quero combinar a entrega com o vendedor" value="entrega2"></v-radio>
             </v-radio-group>
           </v-col>
-          <v-col cols="12 pb-0 text-subtitle-1 font-weight-bold">
-            Endereço de Entrega
-          </v-col>
-          <v-col cols="12 px-0 pt-1">
-            <v-row>
-              <v-col cols="3 px-0 d-flex justify-center align-center">
-                <v-icon color="red-lighten-1">mdi-alert-outline</v-icon>
-              </v-col>
-              <v-col cols="9 px-0">
-                <v-row>
-                  <v-col cols="7 px-0">
-                    <span>
-                      Cadastre seu endereço
-                    </span>
-                    <br>
-                    <span class="text-caption">
-                      você não possui endereços
-                    </span>
-                  </v-col>
-                  <v-col cols="4 px-0 d-flex align-center">
-                    <v-btn density="compact" variant="text" color="purple">Cadastrar</v-btn>
-                  </v-col>
-                </v-row>
-              </v-col>
-            </v-row>
-          </v-col>
+          <v-slide-x-transition>
+            <v-col v-if="tipoEntrega == 'entrega1'" cols="12 pb-0 text-subtitle-1 font-weight-bold">
+              Endereço de Entrega
+            </v-col>
+          </v-slide-x-transition>
+          <v-slide-x-transition>
+            <v-col v-if="tipoEntrega == 'entrega1'" cols="12 px-0 pt-1">
+              <v-row>
+                <v-col cols="3 px-0 d-flex justify-center align-center">
+                  <v-icon color="red-lighten-1">mdi-alert-outline</v-icon>
+                </v-col>
+                <v-col cols="9 px-0">
+                  <v-row>
+                    <v-col cols="7 px-0">
+                      <span>
+                        Cadastre seu endereço
+                      </span>
+                      <br>
+                      <span class="text-caption">
+                        você não possui endereços
+                      </span>
+                    </v-col>
+                    <v-col cols="4 px-0 d-flex align-center">
+                      <v-btn density="compact" 
+                      @click="cadastrarEndereco = true"
+                      variant="text" color="purple">Cadastrar</v-btn>
+                    </v-col>
+                  </v-row>
+                </v-col>
+              </v-row>
+            </v-col>
+          </v-slide-x-transition>
+          <v-slide-x-transition>
+            <v-col v-if="cadastrarEndereco" cols="12">
+              <v-row>
+                <v-col cols="12 py-0">
+                  <v-text-field density="compact" variant="outlined" rounded label="cep"></v-text-field>
+                </v-col>
+                <v-col cols="12 py-0">
+                  <v-text-field density="compact" variant="outlined" rounded label="rua"></v-text-field>
+                </v-col>
+                <v-col cols="12 py-0">
+                  <v-text-field density="compact" variant="outlined" rounded label="número"></v-text-field>
+                </v-col>
+                <v-col cols="12 py-0">
+                  <v-text-field density="compact" variant="outlined" rounded label="estado"></v-text-field>
+                </v-col>
+              </v-row>
+            </v-col>
+          </v-slide-x-transition>
           <v-col cols="12 pb-0 text-subtitle-1 font-weight-bold">
             Opção de Entrega
           </v-col>
@@ -155,6 +179,8 @@ export default defineComponent({
     loadings:{
       loadingCompra:false
     },
+    cadastrarEndereco:false,
+    tipoEntrega:'entrega1',
     currentImage: 1,
     anuncio: {
       titulo: "Televisão Smart Samsung 32 Polegadas",
