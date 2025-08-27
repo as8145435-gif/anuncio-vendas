@@ -28,7 +28,7 @@
             </v-radio-group>
           </v-col>
           <v-slide-x-transition>
-            <v-col v-if="tipoEntrega == 'entrega1'" cols="12 pb-0 text-subtitle-1 font-weight-bold">
+            <v-col v-if="tipoEntrega == 'entrega1'" cols="12 py-0 text-subtitle-1 font-weight-bold">
               Endereço de Entrega
             </v-col>
           </v-slide-x-transition>
