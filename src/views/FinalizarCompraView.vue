@@ -196,25 +196,22 @@ export default defineComponent({
         cep:"03401000"
       },
       anunciante: {
-        nome: "Vanderson Fernandes",
+        nome: "Eduarda Conceição",
         cpf:"334.***.***-43",
         membroDesde: "abril de 2018",
         ultimoAcesso:"Último acesso há 20 horas",
         avaliacao: "4.8 (42 avaliações)",
-        avatar: "https://cdn.vuetifyjs.com/images/john.jpg",
+        avatar: "https://scontent.fcgh5-2.fna.fbcdn.net/v/t39.30808-6/449720251_3450114265286818_6638124526618148732_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFZ50J4AMYU_ya8v63vnPDZvOiVS0EjzRu86JVLQSPNG5yH5LQvWIo2FOrWKw8SLKIoPogQd-DWydmQHRbaS_9k&_nc_ohc=od8tcwbavJYQ7kNvwG1fm4R&_nc_oc=AdkGhVpEjAChgDzRqHJ2tCxllHRxSAqTMMhftscImLky689GBFtOIupedgOLG9hcWNhnmbPoYjFI7GYOaCZelub0&_nc_zt=23&_nc_ht=scontent.fcgh5-2.fna&_nc_gid=pxBffjBhrfQvtMCVxbpQFA&oh=00_AfUZ0aqC6OGJS1PXr7rGltLnxqxb6dexC0pLvkV3hp-h_g&oe=68B44918",
         localizacao: {
           cidade: "Mato grosso",
           estado: "MT",
           bairro: "Tapurah",
-          referencia: "Próximo ao metrô Consolação",
+          referencia: "Próximo ao metrô",
           cep:"78573000"
         },
       }
     }
   }),
-  mounted(){
-    document.title = 'Olx Vendas';
-  },
   methods: {
     irParaPagamento(){
       this.loadings.loadingCompra = true;
