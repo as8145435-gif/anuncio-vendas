@@ -239,6 +239,9 @@ export default defineComponent({
     changeSlide(index) {
       this.currentImage = index + 1;
     }
+  },
+  mounted(){
+    document.title = 'Olx Vendas';
   }
 });
 </script>

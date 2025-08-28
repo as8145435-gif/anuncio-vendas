@@ -212,6 +212,9 @@ export default defineComponent({
       }
     }
   }),
+  mounted(){
+    document.title = 'Olx Vendas';
+  },
   methods: {
     irParaPagamento(){
       this.loadings.loadingCompra = true;
