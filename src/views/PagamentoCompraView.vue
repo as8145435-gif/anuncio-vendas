@@ -13,8 +13,8 @@
       </template>
     </v-app-bar>
     <v-main>
-      <v-container>
-        <v-row>
+      <v-container fluid>
+        <v-row no-gutters>
           <v-col cols="12">
             Compre com segurança e tenha a garantia do dinheiro de volta com a <span class="font-weight-bold text-purple">Compra Segura</span>
           </v-col>

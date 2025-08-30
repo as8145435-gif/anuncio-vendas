@@ -13,8 +13,8 @@
       </template>
     </v-app-bar>
     <v-main>
-      <v-container>
-        <v-row>
+      <v-container fluid>
+        <v-row no-gutters>
           <v-col cols="12">
             Compre com segurança e tenha a garantia do dinheiro de volta com a <span class="font-weight-bold text-purple">Compra Segura</span>
           </v-col>
@@ -34,12 +34,12 @@
           </v-slide-x-transition>
           <v-slide-x-transition>
             <v-col v-if="tipoEntrega == 'entrega1'" cols="12 px-0 pt-1">
-              <v-row>
+              <v-row no-gutters>
                 <v-col cols="3 px-0 d-flex justify-center align-center">
                   <v-icon color="red-lighten-1">mdi-alert-outline</v-icon>
                 </v-col>
                 <v-col cols="9 px-0">
-                  <v-row>
+                  <v-row no-gutters>
                     <v-col cols="7 px-0">
                       <span>
                         Cadastre seu endereço
@@ -61,7 +61,7 @@
           </v-slide-x-transition>
           <v-slide-x-transition>
             <v-col v-if="cadastrarEndereco" cols="12">
-              <v-row>
+              <v-row no-gutters>
                 <v-col cols="12 py-0">
                   <v-text-field density="compact" variant="outlined" rounded label="cep"></v-text-field>
                 </v-col>
@@ -81,12 +81,12 @@
             Opção de Entrega
           </v-col>
           <v-col cols="12 px-0 pt-1">
-            <v-row>
+            <v-row no-gutters>
               <v-col cols="3 px-0 d-flex justify-center align-center">
                 <v-icon color="primary">mdi-truck-delivery</v-icon>
               </v-col>
               <v-col cols="9 px-0">
-                <v-row>
+                <v-row no-gutters>
                   <v-col cols="7 px-0">
                     <span>
                       Expressa
@@ -107,7 +107,7 @@
             Forma de pagamento
           </v-col>
           <v-col cols="12 px-0 pt-1">
-            <v-row>
+            <v-row no-gutters>
               <v-col cols="3 px-0 d-flex justify-center align-center">
                 <v-img :src="imgs.pix" height="30"></v-img>
               </v-col>
@@ -120,7 +120,7 @@
             Resumo
           </v-col>
           <v-col cols="12">
-            <v-row>
+            <v-row no-gutters>
               <v-col cols="3">
                 <v-img height="80" :src="imgs.carrossel[0]"></v-img>
               </v-col>

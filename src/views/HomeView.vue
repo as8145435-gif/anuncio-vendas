@@ -20,9 +20,9 @@
       </template>
     </v-app-bar>
     <v-main>
-      <v-container>
+      <v-container fluid>
         <!-- Carrossel de imagens -->
-        <v-row>
+        <v-row no-gutters>
           <v-col>
             <v-divider></v-divider>
           </v-col>
@@ -44,21 +44,21 @@
             </v-carousel>
           </v-col>
         </v-row>
-        <v-row>
+        <v-row no-gutters>
           <v-col cols="12 pb-0">
             <p class="text-caption text-grey">{{ anuncio.dataHora }}</p>
           </v-col>
         </v-row>
 
         <!-- Título -->
-        <v-row>
+        <v-row no-gutters>
           <v-col cols="12 py-0">
             <h2 class="text-h6">{{ anuncio.titulo }}</h2>
           </v-col>
         </v-row>
 
         <!-- Preços -->
-        <v-row>
+        <v-row no-gutters>
           <v-col cols="12">
             <p class="old-price mb-1">{{ anuncio.precoAntigo }}</p>
             <p class="text-h4 font-weight-bold text-black">{{ anuncio.precoAtual }}</p>
@@ -68,7 +68,7 @@
         <v-divider class="my-4"></v-divider>
 
         <!-- Descrição -->
-        <v-row>
+        <v-row no-gutters>
           <v-col cols="12">
             <p class="mb-2 text-h6">Descrição</p>
             <p class="text-body-2">{{ anuncio.descricao }}</p>
@@ -78,15 +78,15 @@
         <v-divider class="my-4"></v-divider>
 
         <!-- Localização -->
-        <v-row>
+        <v-row no-gutters>
           <v-col cols="12">
             <p class="text-h6 font-weight-bold mb-2">Localização</p>
-            <v-row>
+            <v-row no-gutters>
               <v-col cols="3">
                 <v-img :src="imgs.localizacao"></v-img>
               </v-col>
               <v-col cols="9 d-flex align-center">
-                <v-row>
+                <v-row no-gutters>
                   <v-col cols="12 pb-0">
                     <span class="">{{ anuncio.localizacao.bairro }}</span>
                   </v-col>
@@ -101,19 +101,19 @@
 
         <v-divider class="my-4"></v-divider>
 
-        <v-row>
+        <v-row no-gutters>
           <v-col cols="12">
             <p class="text-h6 font-weight-bold mb-2">Sobre o anunciante</p>
           </v-col>
         </v-row>
 
         <!-- Sobre o anunciante -->
-        <v-row class="d-flex justify-center">
+        <v-row no-gutters class="d-flex justify-center">
           <v-col cols="12 px-1">
             <v-card>
               <v-card-text>
                 <v-container>
-                  <v-row>
+                  <v-row no-gutters>
                     <v-col cols="12">
                       <div class="seller-info">
                         <v-avatar class="seller-avatar" size="60">
@@ -125,7 +125,7 @@
                           <p class="text-caption text-grey mb-1">{{ anuncio.anunciante.ultimoAcesso }}</p>
                         </div>
                       </div>
-                      <v-row>
+                      <v-row no-gutters>
                         <v-col cols="12 text-grey text-caption pb-0">
                           <v-icon class="mr-1">mdi-calendar</v-icon>Na OLX desde {{anuncio.anunciante.membroDesde }}
                         </v-col>
@@ -137,7 +137,7 @@
                       <v-btn variant="outlined" color="grey-darken-1" rounded block class="mt-2">
                         Acessar perfil do anunciante
                       </v-btn>
-                      <v-row>
+                      <v-row no-gutters>
                         <v-col cols="12">
                           <v-divider></v-divider>
                         </v-col>
@@ -172,8 +172,8 @@
     <v-card height="40"></v-card>
     <!-- Bottom fixo com botões de ação -->
     <div class="fixed-bottom">
-      <v-container>
-        <v-row class="py-2">
+      <v-container fluid>
+        <v-row no-gutters class="py-2">
           <v-col cols="8">
             <v-btn @click="$router.push({name:'checkout'})" color="orange" rounded class="text-white" size="large" block>
               <v-icon start>mdi-currency-usd</v-icon>
