@@ -93,7 +93,7 @@
                     </span>
                     <br>
                     <span class="text-caption">
-                      Em até 3 dias úteis
+                      Em até 1 dia útil
                     </span>
                   </v-col>
                   <v-col cols="4 px-0 d-flex align-center font-weight-bold">
