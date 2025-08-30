@@ -84,7 +84,7 @@ export default defineComponent({
   },
   methods: {
     copiarQrCode(){
-      navigator.clipboard.writeText('00020126820014br.gov.bcb.pix013679c61407-3a2b-402b-875b-c067618f4d140220OLX TV 32 Polegadas 5204000053039865406500.005802BR5924Fatima aparecida batista6006Brasil62290525202508262322XXCB9S3F8116K63040A4B')
+      navigator.clipboard.writeText('00020101021126360014br.gov.bcb.pix0114+55119491690255204000053039865406500.005802BR5916BRUNA LUIZA LINO6009SAO PAULO622905251K3XGA6J16SWG3BFBT4F3C35Z6304CD2E')
       .then(() => {
         this.show = true;
       })
